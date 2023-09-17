@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diabetes Prediction</title>
+    <style>
+        h1 {
+        font-size:40px;
+        font-family:Roboto;
+        color:rgb(255,0,0);
+        text-align:center;
+        }
+        p{
+        font-size:20px;
+        font-family:Roboto;
+        text-align:center;
+        }
+        .centered-form {
+        text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Diabetes Prediction</h1>
+
+    {% if result %}
+      <p>{{result}}</p>
+    {% endif %}
+
+    <div class="centered-form">
+        <form method="post" action="/Predict">
+            <label>Pregnancies</label><br>
+            <input type="text" name="Pregnancies" required><br><br>
+
+            <label>Glucose</label><br>
+            <input type="text" name="Glucose" required><br><br>
+
+            <label>BloodPressure</label><br>
+            <input type="text" name="BloodPressure" required><br><br>
+
+            <label>SkinThickness</label><br>
+            <input type="text" name="SkinThickness" required><br><br>
+
+            <label>Insulin</label><br>
+            <input type="text" name="Insulin" required><br><br>
+
+            <label>BMI</label><br>
+            <input type="text" name="BMI" required><br><br>
+
+            <label>DiabetesPedigreeFunction</label><br>
+            <input type="text" name="DiabetesPedigreeFunction" required><br><br>
+
+            <label>Age</label><br>
+            <input type="text" name="Age" required><br><br>
+
+            <input type="submit" value="Predict"><br><br>
+        </form>
+    </div>
+</body>
+</html>
